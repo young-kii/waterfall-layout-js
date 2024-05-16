@@ -1,16 +1,16 @@
 {
   "name": "waterfall-layout-js",
   "version": "1.1.0",
-  "description": "",
+  "description": "A JavaScript library for creating waterfall layouts, supporting umd, esm, and cjs formats.",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://gitcode.net/younggyx/waterfall-layout-js"
+    "url": "https://github.com/young-kii/waterfall-layout-js"
   },
-  "homepage": "https://gitcode.net/younggyx/waterfall-layout-js",
+  "homepage": "https://github.com/young-kii/waterfall-layout-js",
   "scripts": {
     "build": "rollup -cw"
   },
