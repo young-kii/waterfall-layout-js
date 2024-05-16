@@ -1,7 +1,7 @@
-<h1 align="center">
+<h3 align="center">
     Waterfall Layout JS
     <br>
-</h1>
+</h3>
 
 <div align="center">
 
@@ -11,3 +11,7 @@
 ![NPM Type Definitions](https://img.shields.io/npm/types/waterfall-layout-js)
 
 </div>
+
+## License
+
+[MIT](LICENSE)
