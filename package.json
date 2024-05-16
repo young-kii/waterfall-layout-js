@@ -20,7 +20,7 @@
     "column"
   ],
   "author": "Chris Young",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
