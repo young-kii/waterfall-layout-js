@@ -1,6 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 import babel from 'rollup-plugin-babel';
-import { terser } from "rollup-plugin-terser";
+import {terser} from "rollup-plugin-terser";
 
 export default [
   {
@@ -24,12 +24,17 @@ export default [
       },
     ],
     plugins: [
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript({tsconfig: './tsconfig.json'}),
       babel({
         exclude: "node_modules/**",
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }),
-      terser()
+      terser({
+        mangle: {
+          properties: true,  // 也可以压缩对象属性名
+          keep_fnames: false, // 设置为false以压缩函数名
+        }
+      })
     ],
   }
 ];
