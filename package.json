@@ -1,6 +1,6 @@
 {
   "name": "waterfall-layout-js",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A JavaScript library for creating waterfall layouts, supporting umd, esm, and cjs formats.",
   "type": "module",
   "main": "dist/index.cjs",
