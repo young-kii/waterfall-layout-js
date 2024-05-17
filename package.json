@@ -12,7 +12,8 @@
   },
   "homepage": "https://github.com/young-kii/waterfall-layout-js",
   "scripts": {
-    "build": "rollup -cw"
+    "build": "rollup",
+    "build-watch": "rollup -cw"
   },
   "keywords": [
     "waterfall-layout",
