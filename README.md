@@ -37,6 +37,9 @@ Using jsDelivr CDN:
 ```
 
 Using unpkg CDN:
+```html
+<script src="https://unpkg.com/waterfall-layout-js@latest/dist/index.min.js"></script>
+```
 
 ## License
 
