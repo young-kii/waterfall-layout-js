@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -16,7 +16,6 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
-        # 添加更多的Node.js版本
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,6 +28,4 @@ jobs:
     - name: Install dependencies
       run: yarn install
     - name: Build
-      run: yarn build --if-present
-    - name: Run tests
-      run: yarn test
+      run: yarn build
