@@ -15,6 +15,7 @@ A JavaScript library for creating waterfall layouts, supporting umd, esm, and cj
 ![NPM License](https://img.shields.io/npm/l/waterfall-layout-js)
 ![GitHub language count](https://img.shields.io/github/languages/count/young-kii/waterfall-layout-js)
 ![NPM Type Definitions](https://img.shields.io/npm/types/waterfall-layout-js)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/young-kii/waterfall-layout-js/node.js.yml)
 
 </div>
 
