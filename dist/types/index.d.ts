@@ -1,43 +1,63 @@
-export interface item {
+interface Item {
     width: number;
     height: number;
     x: number;
     y: number;
     id: string;
+    url: string;
 }
-interface options {
-    columnCount: number;
-    onUpdate?: (props: onUpdateProps) => void;
-    items: item[];
-    columnGap: number;
-    rowGap: number;
+export type WaterfallLayoutItem<T> = Item & T;
+export interface WaterfallOptions {
+    columnCount?: number;
+    onUpdate?: (props: UpdateProps) => void;
+    onReady?: (props: ReadyProps) => void;
+    items: WaterfallLayoutItem<any>[];
+    columnGap?: number;
+    rowGap?: number;
     responsive?: boolean;
+    minItemWidth?: number;
 }
-interface onUpdateProps {
+interface ReadyProps {
+    items: WaterfallLayoutItem<any>[][];
     itemWidth: number;
-    containerWidth: number;
     containerHeight: number;
-    newItems: item[][];
+    containerWidth: number;
+    columnCount: number;
+}
+interface UpdateProps extends ReadyProps {
 }
 declare class Waterfall {
+    static defaultColumnCount: number;
     private columnCount;
     private container;
     private columnGap;
     private rowGap;
     private containerId;
     private itemWidth;
+    private minItemWidth;
     private responsive;
     private resizeObserver;
     private onUpdate;
+    private onReady;
     private containerHeight;
+    private containerWidth;
     private newItems;
     private items;
-    constructor(containerId: string, options: options);
-    private initContainer;
-    private genNewItems;
-    getItemWidth(): number;
-    getNewItems(): item[][];
+    constructor(containerId: string, options: WaterfallOptions);
+    private generateIds;
+    private getCommonInfo;
+    private debounce;
+    private updateFunction;
+    private update;
+    private ready;
+    private initializeContainer;
+    private generateNewItems;
+    private getItemWidth;
+    getUpdatedItems(): any[][];
     getContainerHeight(): number;
-    unobserve(): void;
+    addItems(items: WaterfallLayoutItem<any>[]): void;
+    private setColumnCount;
+    updateColumnCount(columnCount: number): void;
+    unobserveResize(): void;
 }
 export default Waterfall;
